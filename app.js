@@ -1,4 +1,3 @@
-
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -10,7 +9,7 @@ app.use(bodyParser.json({ limit: "10mb" }));
 let face_matchResult = "";
 let latestImage = ""; 
 app.get("/", (req, res) => {
-   res.send("running")
+       res.send("running");
 });
 // Endpoint to receive image from ESP32-CAM
 app.post("/receive-image", (req, res) => {
